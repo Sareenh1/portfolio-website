@@ -3,113 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>H Sareen Kumar - DevOps Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
         header {
-            background: linear-gradient(90deg, #007bff, #00d4ff);
-            color: white;
+            background: linear-gradient(135deg, #6b48ff, #00ddeb);
             text-align: center;
-            padding: 2em 0;
+            padding: 4rem 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            margin-top: 0.5rem;
         }
         nav {
-            background: #333;
-            padding: 1em;
-            text-align: center;
+            background: #1e1e1e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
         nav a {
-            color: white;
-            margin: 0 1em;
+            color: #00ddeb;
             text-decoration: none;
-            font-weight: bold;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #007bff;
+            color: #fff;
+            border-bottom: 2px solid #6b48ff;
         }
         .container {
-            max-width: 1000px;
-            margin: 2em auto;
-            padding: 0 1em;
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
         .section {
-            margin-bottom: 2em;
+            margin-bottom: 3rem;
+            background: #1e1e1e;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
         }
         .section h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 0.5em;
+            color: #6b48ff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #00ddeb;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
         .project {
-            background: white;
-            padding: 1em;
-            margin: 1em 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #2a2a2a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(107, 72, 255, 0.4);
+        }
+        .project h3 {
+            color: #00ddeb;
+            margin-bottom: 0.5rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .skill {
+            background: #6b48ff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
         }
         footer {
-            background: #333;
-            color: white;
+            background: #1e1e1e;
             text-align: center;
-            padding: 1em 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 2rem;
+            color: #aaa;
+            border-top: 1px solid #333;
         }
-        @media (max-width: 600px) {
+        footer a {
+            color: #00ddeb;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 2rem;
+            }
+            nav a {
+                margin: 0 0.8rem;
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            nav {
+                padding: 0.5rem;
             }
             nav a {
                 display: block;
-                margin: 0.5em 0;
+                margin: 0.5rem 0;
+            }
+            .section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | DevOps Enthusiast</p>
+        <h1>H Sareen Kumar</h1>
+        <p>DevOps Intern at Elevate Labs | Building Scalable Solutions</p>
     </header>
     <nav>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
         <div class="section" id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm a passionate developer with a knack for creating efficient and scalable solutions. I specialize in web development and am exploring DevOps to streamline deployments.</p>
+            <p>Hi! I'm a passionate DevOps enthusiast currently interning at Elevate Labs, where I automate deployments and streamline CI/CD pipelines. With a background in Mechanical Engineering, I’ve transitioned to DevOps to create efficient, scalable systems using tools like AWS, Docker, and Git. My goal is to optimize infrastructure and accelerate development cycles.</p>
+        </div>
+        <div class="section" id="skills">
+            <h2>DevOps Skills</h2>
+            <div class="skills">
+                <span class="skill">AWS</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Kubernetes</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub Actions</span>
+                <span class="skill">Terraform</span>
+                <span class="skill">Jenkins</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Ansible</span>
+            </div>
         </div>
         <div class="section" id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Portfolio Website</h3>
-                <p>A static website hosted on GitHub Pages, showcasing my skills and projects.</p>
-            </div>
-            <div class="project">
-                <h3>Sample Web App</h3>
-                <p>A responsive web application built with HTML, CSS, and JavaScript.</p>
+            <h2>DevOps Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>CI/CD Pipeline with GitHub Actions</h3>
+                    <p>Automated build and deployment for a web app using GitHub Actions, integrated with AWS EC2. Reduced deployment time by 50%.</p>
+                </div>
+                <div class="project">
+                    <h3>Infrastructure as Code with Terraform</h3>
+                    <p>Provisioned AWS resources (VPC, EC2, S3) using Terraform, ensuring reproducible infrastructure setups.</p>
+                </div>
+                <div class="project">
+                    <h3>Containerized App with Docker</h3>
+                    <p>Built and deployed a Node.js app in Docker containers, orchestrated with Docker Compose for scalability.</p>
+                </div>
             </div>
         </div>
         <div class="section" id="contact">
             <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>GitHub: <a href="https://github.com/Sareenh1">github.com/<your-username></a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sareen-kumar/">linkedin.com/in/<your-profile></a></p>
+            <p>Email: Sareenh10@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/Sareenh1">github.com/<Sareen Kumar></a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/sareen-kumar/">linkedin.com/in/<Sareen Kumar></a></p>
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 H Sareen Kumar | Powered by <a href="https://pages.github.com">GitHub Pages</a></p>
     </footer>
 </body>
 </html>
