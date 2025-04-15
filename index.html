@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H Sareen Kumar - DevOps Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Your Name - DevOps Rockstar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,132 +12,166 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #121212;
-            color: #e0e0e0;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            background: #0a0a23;
+            color: #fff;
             overflow-x: hidden;
+            position: relative;
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white" opacity="0.3"/><circle cx="90" cy="20" r="1" fill="white" opacity="0.5"/><circle cx="50" cy="80" r="1" fill="white" opacity="0.4"/><circle cx="30" cy="50" r="1" fill="white" opacity="0.6"/><circle cx="70" cy="60" r="1" fill="white" opacity="0.3"/></svg>') repeat;
+            z-index: -1;
+            animation: twinkle 10s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 0.3; }
         }
         header {
-            background: linear-gradient(135deg, #6b48ff, #00ddeb);
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
             text-align: center;
-            padding: 4rem 2rem;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            opacity: 0.5;
         }
         header h1 {
-            font-size: 3rem;
-            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
             color: #fff;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc, 0 0 30px #3333ff; }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px #ff00cc, 0 0 40px #3333ff; }
         }
         header p {
-            font-size: 1.2rem;
-            color: #f0f0f0;
-            margin-top: 0.5rem;
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            margin-top: 1rem;
+            font-weight: 300;
         }
         nav {
-            background: #1e1e1e;
+            background: rgba(10, 10, 35, 0.9);
+            backdrop-filter: blur(10px);
             padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
         nav a {
-            color: #00ddeb;
+            color: #ff00cc;
             text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            margin: 0 2rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         nav a:hover {
             color: #fff;
-            border-bottom: 2px solid #6b48ff;
+            transform: scale(1.1);
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 3rem auto;
             padding: 0 2rem;
         }
         .section {
-            margin-bottom: 3rem;
-            background: #1e1e1e;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border: 1px solid #ff00cc;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .section:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
         }
         .section h2 {
-            color: #6b48ff;
-            font-size: 1.8rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #3333ff;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            position: relative;
-        }
-        .section h2::after {
-            content: '';
-            width: 50px;
-            height: 3px;
-            background: #00ddeb;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
+            text-transform: uppercase;
         }
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
         .project {
-            background: #2a2a2a;
+            background: #1a1a3b;
             padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
         .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(107, 72, 255, 0.4);
+            transform: scale(1.08);
+            background: #2a2a5b;
         }
         .project h3 {
-            color: #00ddeb;
+            color: #ff00cc;
+            font-family: 'Orbitron', sans-serif;
             margin-bottom: 0.5rem;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 1rem;
             margin-top: 1rem;
         }
         .skill {
-            background: #6b48ff;
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
             color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
             font-size: 0.9rem;
+            font-weight: 500;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         footer {
-            background: #1e1e1e;
+            background: #0a0a23;
             text-align: center;
             padding: 2rem;
-            color: #aaa;
-            border-top: 1px solid #333;
+            border-top: 2px solid #3333ff;
         }
         footer a {
-            color: #00ddeb;
+            color: #ff00cc;
             text-decoration: none;
+            font-weight: 500;
         }
         footer a:hover {
             color: #fff;
         }
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             nav a {
-                margin: 0 0.8rem;
-                font-size: 0.9rem;
+                margin: 0 1rem;
+                font-size: 1rem;
             }
             .container {
                 padding: 0 1rem;
@@ -145,14 +179,14 @@
         }
         @media (max-width: 480px) {
             header {
-                padding: 2rem 1rem;
+                padding: 3rem 1rem;
             }
             nav {
                 padding: 0.5rem;
             }
             nav a {
                 display: block;
-                margin: 0.5rem 0;
+                margin: 0.8rem 0;
             }
             .section {
                 padding: 1.5rem;
@@ -161,9 +195,10 @@
     </style>
 </head>
 <body>
+    <div class="stars"></div>
     <header>
-        <h1>H Sareen Kumar</h1>
-        <p>DevOps Intern at Elevate Labs | Building Scalable Solutions</p>
+        <h1>Your Name</h1>
+        <p>DevOps Intern at Elevate Labs | Crafting the Future of Automation</p>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -174,48 +209,48 @@
     <div class="container">
         <div class="section" id="about">
             <h2>About Me</h2>
-            <p>Hi! I'm a passionate DevOps enthusiast currently interning at Elevate Labs, where I automate deployments and streamline CI/CD pipelines. With a background in Mechanical Engineering, I’ve transitioned to DevOps to create efficient, scalable systems using tools like AWS, Docker, and Git. My goal is to optimize infrastructure and accelerate development cycles.</p>
+            <p>I’m a DevOps rockstar interning at Elevate Labs, where I’m revolutionizing workflows with cutting-edge automation. With a Mechanical Engineering foundation, I’ve pivoted to master cloud and CI/CD pipelines, driven by a passion to make systems faster, smarter, and unstoppable. At Elevate, I’m pushing boundaries to deliver seamless deployments!</p>
         </div>
         <div class="section" id="skills">
-            <h2>DevOps Skills</h2>
+            <h2>DevOps Arsenal</h2>
             <div class="skills">
                 <span class="skill">AWS</span>
                 <span class="skill">Docker</span>
                 <span class="skill">Kubernetes</span>
-                <span class="skill">Git</span>
-                <span class="skill">GitHub Actions</span>
                 <span class="skill">Terraform</span>
                 <span class="skill">Jenkins</span>
-                <span class="skill">Linux</span>
+                <span class="skill">GitHub Actions</span>
                 <span class="skill">Ansible</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Python</span>
             </div>
         </div>
         <div class="section" id="projects">
-            <h2>DevOps Projects</h2>
+            <h2>Epic DevOps Quests</h2>
             <div class="project-grid">
                 <div class="project">
-                    <h3>CI/CD Pipeline with GitHub Actions</h3>
-                    <p>Automated build and deployment for a web app using GitHub Actions, integrated with AWS EC2. Reduced deployment time by 50%.</p>
+                    <h3>Zero-Downtime CI/CD Pipeline</h3>
+                    <p>Engineered a GitHub Actions pipeline at Elevate Labs to deploy a web app on AWS, slashing release cycles by 60%.</p>
                 </div>
                 <div class="project">
-                    <h3>Infrastructure as Code with Terraform</h3>
-                    <p>Provisioned AWS resources (VPC, EC2, S3) using Terraform, ensuring reproducible infrastructure setups.</p>
+                    <h3>Terraform-Powered Cloud Empire</h3>
+                    <p>Orchestrated AWS infrastructure with Terraform, automating VPCs and EC2 setups for bulletproof scalability.</p>
                 </div>
                 <div class="project">
-                    <h3>Containerized App with Docker</h3>
-                    <p>Built and deployed a Node.js app in Docker containers, orchestrated with Docker Compose for scalability.</p>
+                    <h3>Dockerized Microservices</h3>
+                    <p>Containerized a full-stack app with Docker and Kubernetes, boosting deployment reliability at Elevate Labs.</p>
                 </div>
             </div>
         </div>
         <div class="section" id="contact">
-            <h2>Contact</h2>
-            <p>Email: Sareenh10@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/Sareenh1">Sareen Kumar</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/sareen-kumar/">Sareen Kumar</a></p>
+            <h2>Connect with the Future</h2>
+            <p>Email: your.email@example.com</p>
+            <p>GitHub: <a href="https://github.com/<your-username>">github.com/<your-username></a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/">linkedin.com/in/<your-profile></a></p>
         </div>
     </div>
     <footer>
-        <p>© 2025 H Sareen Kumar | Powered by <a href="https://pages.github.com">GitHub Pages</a></p>
+        <p>© 2025 H Sareen Kumar | Built for <a href="#">Elevate Labs</a> with 🚀</p>
     </footer>
 </body>
 </html>
