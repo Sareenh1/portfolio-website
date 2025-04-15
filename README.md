@@ -20,7 +20,7 @@ Deploy a static website using GitHub Pages to demonstrate proficiency in hosting
 - Highlights my role as DevOps Intern at Elevate Labs.
 
 ## Deployment
-The website is live at: [https://<Sareen Kumar>.github.io/portfolio-website/](https://<Sareenh1>.github.io/portfolio-website/)
+The website is live at: [https://<Sareen Kumar>.github.io/portfolio-website/](https://sareenh1.github.io/portfolio-website/)
 
 ## How It Was Built
 1. Created an `index.html` file with HTML and inline CSS for a trendy design.
